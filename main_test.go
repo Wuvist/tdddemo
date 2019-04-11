@@ -45,6 +45,24 @@ func TestCounterAdd(t *testing.T) {
 		t.Error("Add Fail:" + result)
 	}
 
+	result, err = httpPost("http://localhost:8323/api/furyCount.Add", nil)
+	if err != nil {
+		t.Error(err)
+	}
+
+	if result != "Must provide counter name" {
+		t.Error("Add Fail:" + result)
+	}
+
+	result, err = httpPost("http://localhost:8323/api/furyCount.Add", v)
+	if err != nil {
+		t.Error(err)
+	}
+
+	if result != "counter exist" {
+		t.Error("Add Fail:" + result)
+	}
+
 	result, err = httpPost("http://localhost:8323/api/furyCount.Get", v)
 	if err != nil {
 		t.Error(err)
@@ -62,5 +80,23 @@ func TestCounterAdd(t *testing.T) {
 
 	if result != "counter not found" {
 		t.Error("Get Fail fi:" + result)
+	}
+
+	result, err = httpPost("http://localhost:8323/api/furyCount.Get", nil)
+	if err != nil {
+		t.Error(err)
+	}
+
+	if result != "Must provide counter name" {
+		t.Error("Get Fail fi:" + result)
+	}
+
+	result, err = httpGet("http://localhost:8323/")
+	if err != nil {
+		t.Error(err)
+	}
+
+	if result != "Hello, World!" {
+		t.Error("index:" + result)
 	}
 }

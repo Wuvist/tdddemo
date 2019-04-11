@@ -26,7 +26,3 @@ func Bind(e *echo.Echo) error {
 func hello(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello, World!")
 }
-
-func logout(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!")
-}
