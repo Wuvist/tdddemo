@@ -40,6 +40,14 @@ TDD能够帮助我们做更好的设计？
 * 先写测试再写实现
 * 测试
 
+# go web程序测试
+
+## 覆盖率
+
+```bash
+go test  -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/newtrans
+```
+
 # 案例
 
 实现一个`购物车`
