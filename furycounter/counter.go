@@ -58,5 +58,8 @@ func (c *Counter) Hit() {
 func (c *Counter) Block() {
 	if c.Fury > 0 {
 		c.Fury = 0
+	} else if c.Fury < 1 {
+		c.Fury = c.Fury - 1
+		c.BonusLevel = c.BonusLevel - 1
 	}
 }
