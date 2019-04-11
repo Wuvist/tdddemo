@@ -17,7 +17,7 @@ func Bind(e *echo.Echo) error {
 	e.POST("/api/furyCount.Add", add)
 	e.POST("/api/furyCount.Hit", hit)
 	e.POST("/api/furyCount.Block", block)
-	e.GET("/api/furyCount.Get", get)
+	e.POST("/api/furyCount.Get", get)
 
 	return nil
 }
