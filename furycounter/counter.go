@@ -36,6 +36,22 @@ type Counter struct {
 // Hit hits the fury counter
 func (c *Counter) Hit() {
 	c.Fury = c.Fury + 1
+	c.BonusCount = c.BonusCount + 1
+	if c.BonusCount == 5 {
+		c.BonusCount = 0
+		c.BonusLevel = c.BonusLevel + 1
+
+		bonus := 0
+		if c.BonusLevel <= 5 {
+			bonus = c.BonusLevel
+		} else if c.BonusLevel <= 10 {
+			bonus = c.Fury*2 + c.BonusLevel
+		} else if c.BonusLevel > 10 {
+			bonus = c.Fury * c.BonusLevel
+		}
+
+		c.Fury = c.Fury + bonus
+	}
 }
 
 // Block Block the fury counter
