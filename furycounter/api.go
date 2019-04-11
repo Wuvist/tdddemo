@@ -1,4 +1,4 @@
-package newtrans
+package furycounter
 
 import (
 	"net/http"
