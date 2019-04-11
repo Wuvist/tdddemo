@@ -45,7 +45,10 @@ TDD能够帮助我们做更好的设计？
 ## 覆盖率
 
 ```bash
-go test  -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounter
+go test -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounter
+
+go test -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounter -coverprofile p.out
+go tool cover -html p.out
 ```
 
 # 案例

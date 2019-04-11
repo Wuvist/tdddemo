@@ -51,6 +51,16 @@ func TestCounterAdd(t *testing.T) {
 	}
 
 	if result != "0" {
-		t.Error("Add Fail:" + result)
+		t.Error("Get Fail:" + result)
+	}
+
+	v.Set("name", "Kim")
+	result, err = httpPost("http://localhost:8323/api/furyCount.Get", v)
+	if err != nil {
+		t.Error(err)
+	}
+
+	if result != "counter not found" {
+		t.Error("Get Fail fi:" + result)
 	}
 }
