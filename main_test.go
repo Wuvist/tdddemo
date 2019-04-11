@@ -42,7 +42,7 @@ func init() {
 
 func TestCounterHit(t *testing.T) {
 	v := url.Values{}
-	v.Set("name", "Tom")
+	v.Set("name", "Jet")
 	result := httpPost("http://localhost:8323/api/furyCount.Add", v)
 	if result != "" {
 		t.Error("Add Fail:" + result)
