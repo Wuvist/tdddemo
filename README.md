@@ -49,6 +49,9 @@ go test -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounte
 
 go test -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounter -coverprofile p.out
 go tool cover -html p.out
+
+
+go test ./... -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/furycounter -coverprofile p.out; go tool cover -html p.out
 ```
 
 # 案例
