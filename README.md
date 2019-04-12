@@ -124,11 +124,11 @@ go test ./... -coverpkg github.com/Wuvist/tdddemo,github.com/Wuvist/tdddemo/fury
     * Fury减1
     * BonusLevel减1
 
-# 购物车
+## 购物车
+
+截图来自[papi酱 周一放送](https://www.youtube.com/watch?v=Tst5oz1vi5s)
 
 ![](images/2019-04-11-14-14-47.png)
-
-https://www.youtube.com/watch?v=Tst5oz1vi5s
 
 ![](images/2019-04-11-14-16-28.png)
 
